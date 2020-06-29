@@ -5,14 +5,14 @@ $body-color: #1E2124;
 $font: 'Ubuntu', sans-serif;
 $width: 1145px;
 
-$logo: url('/src/icons-svg/logo.svg');
-$search: url('/src/icons-svg/search.svg');
-$chevron: url('/src/icons-svg/chevron.svg');
-$chevron-filter: url('/src/icons-svg/chevron-filter.svg');
-$dots: url('/src/icons-svg/dots.svg');
-$triangle: url('/src/icons-svg/triangle.svg');
-$chevron-date: url('/src/icons-svg/chevron-date.svg');
-$line: url('/src/icons-svg/line.svg');
+$logo: url(../icons-svg/logo.svg);
+$search: url(../icons-svg/search.svg);
+$chevron: url(../icons-svg/chevron.svg);
+$chevron-filter: url(../icons-svg/chevron-filter.svg);
+$dots: url(../icons-svg/dots.svg);
+$triangle: url(../icons-svg/triangle.svg);
+$chevron-date: url(../icons-svg/chevron-date.svg);
+$line: url(../icons-svg/line.svg);
 
 $iw: 90px;
 $pw: 71px;
@@ -215,7 +215,7 @@ main {
 }
 
 .square {
-  background-image: url('/src/icons-svg/square1.svg');
+  background-image: url(../icons-svg/square1.svg);
   width: 42px;
   height: 42px;
   position: fixed;

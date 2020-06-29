@@ -99,10 +99,6 @@ module.exports = {
                 use: cssLoaders('sass-loader')
             },
             {
-                test: /\.(png|jpg|svg|gif)$/,
-                use: ['file-loader']
-            },
-            {
                 test: /\.(ttf|woff|woff2|eot)$/,
                 use: ['file-loader']
             },
@@ -114,11 +110,14 @@ module.exports = {
                 test: /\.js$/, 
                 exclude: /node_modules/, 
                 loader: 'babel-loader' 
-            },
+            },            
             {
-                test: /\.svg$/,
-                loader: 'svg-inline-loader'
-            }
+                test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+                loader: 'file-loader', 
+                options: {
+                    name:'src/icons-svg/[name].[ext]'                    
+                },
+            },
         ]
     }
 }
