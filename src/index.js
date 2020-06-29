@@ -33,18 +33,6 @@ const API = {
     return getData(API.POST_MEDIA + id).then(data => data.source_url);
   }
   
-  const getTest = () => {
-    return console.log("testetststetts")
-  }
-//   const actualPostTemplate = (title, image) => (
-//     `<div class="item">
-//       <p class="title">${title}</p>
-//       <div class="image">
-//           <img src="${image}" alt="">
-//       </div>
-//     </div>`
-//   );
-  
   const actualPostTemplate = (title, image, date) => (
     `<div class="col-eld 4 col-sm-12 col-md-6">
     <div class="main-news__item" style="background-image: url(${image});">
@@ -91,7 +79,7 @@ const API = {
         <div class="hr"></div>
     </div> 
     `
-  )
+  );
 
   const renderActualPosts = (parent) => {
     getData(API.ACTUAL_NEWS)
@@ -110,11 +98,8 @@ const API = {
     getData(API.LATEST_NEWS)
       .then(posts => {
         console.log(posts);
-        posts.map((item) => {
-          getTest()
-          .then(data => {
-            parent.innerHTML += latestPostTemplate(item.title.rendered, data, item.date)
-          })
+        posts.map((item) => {          
+          parent.innerHTML += latestPostTemplate(item.title.rendered, item.date);
         })
       })
   }
