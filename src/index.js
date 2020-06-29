@@ -84,7 +84,6 @@ const API = {
   const renderActualPosts = (parent) => {
     getData(API.ACTUAL_NEWS)
       .then(posts => {
-        console.log(posts);
         posts.map((item) => {
           getImage(item.featured_media)
             .then(data => {
@@ -97,7 +96,6 @@ const API = {
   const renderLatestPosts = (parent) => {
     getData(API.LATEST_NEWS)
       .then(posts => {
-        console.log(posts);
         posts.map((item) => {          
           parent.innerHTML += latestPostTemplate(item.title.rendered, item.date);
         })

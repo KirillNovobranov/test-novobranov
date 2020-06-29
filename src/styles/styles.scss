@@ -13,6 +13,7 @@ $dots: url(../icons-svg/dots.svg);
 $triangle: url(../icons-svg/triangle.svg);
 $chevron-date: url(../icons-svg/chevron-date.svg);
 $line: url(../icons-svg/line.svg);
+$burger: url(../icons-svg/burger1.svg);
 
 $iw: 90px;
 $pw: 71px;
@@ -71,6 +72,13 @@ body {
 
 a {
   text-decoration: none;
+}
+
+button {
+    background-image: $burger;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
 }
 
 button:focus {
@@ -432,11 +440,17 @@ main {
   .nav {
     height: 60px;
   }
+
+  .test {
+    // background-image: $burger;
+    width: 100px;
+    height: 100px;
+  }
   .menu-open {
     z-index: 4;
     display: block;
     border: none;
-    background: none;
+    // background: none;
     img {
       width: 45px;
     }
